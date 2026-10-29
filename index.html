@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f6f8">
+  <title>Castor Soluciones | Gestión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Castor Soluciones, inicio">
+        <img class="brand-logo" src="assets/castor-sol-logo.png" alt="Castor Soluciones">
+      </a>
+      <div class="workspace-label">ESPACIO DE TRABAJO</div>
+      <nav class="navigation" id="navigation" aria-label="Navegación principal"></nav>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon">✳</span>
+          <strong>¿Necesitas ayuda?</strong>
+          <span>Consulta la guía de uso del sistema.</span>
+          <button type="button" class="help-link" id="helpButton">Ver guía <span>↗</span></button>
+        </div>
+        <div class="sidebar-user">
+          <div class="avatar avatar-dark">CS</div>
+          <div class="user-meta"><strong>Castor Soluciones</strong><span>Plan de demostración</span></div>
+          <button class="icon-button logout-button" id="logoutButton" aria-label="Cerrar sesión" title="Volver al inicio">↪</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" aria-label="Abrir menú">☰</button>
+        <div class="breadcrumbs"><span>Castor Soluciones</span><span class="crumb-divider">/</span><strong id="breadcrumbCurrent">Resumen</strong></div>
+        <div class="topbar-actions">
+          <label class="role-control"><span>Vista de</span><select id="roleSelect" aria-label="Cambiar perfil"><option>Propietario</option><option>Vendedor</option><option>Logística</option></select></label>
+          <button class="icon-button notification-button" id="notificationButton" aria-label="Notificaciones">♧<i></i></button>
+          <div class="avatar avatar-owner" id="headerAvatar">MA</div>
+        </div>
+      </header>
+      <div class="page-content" id="pageContent"></div>
+      <footer class="footer"><span>© 2026 Castor Soluciones</span><span>Gestión de inventario y ventas <b>·</b> v1.0</span></footer>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header"><div><span class="eyebrow" id="modalEyebrow">GESTIÓN</span><h2 id="modalTitle">Nuevo registro</h2></div><button class="icon-button" id="closeModal" aria-label="Cerrar">×</button></div>
+      <form id="recordForm"><div class="form-grid" id="formFields"></div><div class="form-total" id="formTotal" hidden></div><div class="modal-actions"><button type="button" class="button button-quiet" id="cancelModal">Cancelar</button><button type="submit" class="button button-primary" id="submitModal">Guardar registro</button></div></form>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
